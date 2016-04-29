@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/galerie")
+@WebServlet("/contact")
 
 public class ContactServlet extends HttpServlet {
 
@@ -26,7 +26,7 @@ public class ContactServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/galerie.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/contact.jsp");
 		view.forward(request, response);
 	}
 
