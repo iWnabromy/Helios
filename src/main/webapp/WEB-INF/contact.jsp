@@ -70,16 +70,8 @@
 					13 rue de Toul<br>Lille, 59000<br>
 				</p>
 				<p>
-					<i class="fa fa-phone"></i> <abbr title="Phone">Tél.</abbr>:
-					0327272727
-				</p>
-				<p>
 					<i class="fa fa-envelope-o"></i> <abbr title="Email">Mail</abbr>: <a
-						href="mailto:name@example.com">name@example.com</a>
-				</p>
-				<p>
-					<i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday
-					- Friday: 9:00 AM to 5:00 PM
+						href="mailto:helioscarteam@gmail.com">helioscarteam@gmail.com</a>
 				</p>
 				<ul class="list-inline" style="text-align: center;">
 					<li><a style="color: #3b5998;" href="#"><i
@@ -103,25 +95,10 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h3>Envoyez nous un message</h3>
-				<form name="sentMessage" id="contactForm" novalidate>
+				<form name="sentMessage" id="contactForm" method="post" action="contact" novalidate>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Nom:</label> <input type="text" class="form-control"
-								id="name" required
-								data-validation-required-message="Veuillez entrer votre nom">
-							<p class="help-block"></p>
-						</div>
-					</div>
-					<div class="control-group form-group">
-						<div class="controls">
-							<label>Numéro de téléphone</label> <input type="tel"
-								class="form-control" id="phone" required
-								data-validation-required-message="Veuillez entrer votre numéro de téléphone">
-						</div>
-					</div>
-					<div class="control-group form-group">
-						<div class="controls">
-							<label>Adresse mail</label> <input type="email"
+							<label>Votre adresse mail</label> <input type="email"
 								class="form-control" id="email" required
 								data-validation-required-message="Veuillez entrer votre adresse mail.">
 						</div>
@@ -137,7 +114,7 @@
 					</div>
 					<div id="success"></div>
 					<!-- For success/fail messages -->
-					<button type="submit" class="btn btn-primary" href="mailto:romain.bondois@hei.fr">Envoyer</button>
+					<button type="submit" class="btn btn-primary">Envoyer</button>
 				</form>
 			</div>
 

@@ -27,7 +27,7 @@
 </head>
 <body>
 	<!-- Header et Menu de navigation -->
-	<c:import url="header.jsp">
+	<c:import url="WEB-INF/header.jsp">
 	</c:import>
 	<!-- Page Content -->
 	<div class="container">
@@ -100,7 +100,7 @@
 		<!-- /.row -->
 		<hr>
 		<!-- footer -->
-		<c:import url="footer.jsp">
+		<c:import url="WEB-INF/footer.jsp">
 		</c:import>
 	</div>
 	<!-- /.container -->
