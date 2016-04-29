@@ -34,7 +34,7 @@
 		<!-- Marketing Icons Section -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Conduire plus, consommer moins</h1>
+				<h1 class="page-header">Helios</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					Itaque, optio corporis quae nulla aspernatur in alias at numquam
 					rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet
@@ -52,7 +52,7 @@
 							Itaque, optio corporis quae nulla aspernatur in alias at numquam
 							rerum ea excepturi expedita tenetur assumenda voluptatibus
 							eveniet incidunt dicta nostrum quod?</p>
-						<a href="/helios/voiture" class="btn btn-default">Voir</a>
+						<a href="/voiture" class="btn btn-default">Voir</a>
 					</div>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 							Itaque, optio corporis quae nulla aspernatur in alias at numquam
 							rerum ea excepturi expedita tenetur assumenda voluptatibus
 							eveniet incidunt dicta nostrum quod?</p>
-						<a href="/helios/team" class="btn btn-default">Voir</a>
+						<a href="/team" class="btn btn-default">Voir</a>
 					</div>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 							Itaque, optio corporis quae nulla aspernatur in alias at numquam
 							rerum ea excepturi expedita tenetur assumenda voluptatibus
 							eveniet incidunt dicta nostrum quod?</p>
-						<a href="/helios/partenaires" class="btn btn-default">Voir</a>
+						<a href="/partenaires" class="btn btn-default">Voir</a>
 					</div>
 				</div>
 			</div>
