@@ -125,4 +125,17 @@ public class HeliosManager {
 		List<Admin> listeAdmin = adminDao.getAdmin();
 		return listeAdmin;
 	}
+
+	public Partenaire getPartenaire(Integer id) {
+		Partenaire sponsor = partenaireDao.getPartenaire(id);
+		return sponsor;
+	}
+
+	public void ModifierPartenaire(Partenaire nouveauPartenaire) {
+		if (nouveauPartenaire == null) {
+			throw new IllegalArgumentException("Le sponsor à modifier ne peut pas être null.");
+		}
+		else
+			partenaireDao.ModifierPartenaire(nouveauPartenaire);		
+	}
 }

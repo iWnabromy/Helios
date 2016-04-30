@@ -65,8 +65,8 @@
 							<li><a><i class="fa fa-th-list"></i> Sponsors <span
 									class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu" style="display: none;">
-									<li><a href="">Liste des ponsors</a></li>
-									<li><a href="">Ajouter un sponsor</a></li>
+									<li><a href="sponsor">Liste des sponsors</a></li>
+									<li><a href="sponsorajouter">Ajouter un sponsor</a></li>
 								</ul></li>
 						</ul>
 					</div>

@@ -95,18 +95,26 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h3>Envoyez nous un message</h3>
-				<form name="sentMessage" id="contactForm" method="post" action="contact" novalidate>
+				<form method="post" action="contact">
 					<div class="control-group form-group">
 						<div class="controls">
 							<label>Votre adresse mail</label> <input type="email"
-								class="form-control" id="email" required
+								class="form-control" id="email" name="email" required
 								data-validation-required-message="Veuillez entrer votre adresse mail.">
 						</div>
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
+							<label>Mot de passe de votre mail:</label>
+							<input type="password" class="form-control" id="pass" name="pass"
+								required
+								data-validation-required-message="Veuillez entrer votre mdp"
+								maxlength="999" style="resize: none"></textarea>
+						</div>
+					<div class="control-group form-group">
+						<div class="controls">
 							<label>Message:</label>
-							<textarea rows="10" cols="100" class="form-control" id="message"
+							<textarea rows="10" cols="100" class="form-control" id="message" name="message"
 								required
 								data-validation-required-message="Veuillez entrer votre message"
 								maxlength="999" style="resize: none"></textarea>

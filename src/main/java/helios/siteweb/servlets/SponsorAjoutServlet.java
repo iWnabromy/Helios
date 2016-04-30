@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import helios.siteweb.metier.HeliosManager;
 import helios.siteweb.model.Membre;
 
-@WebServlet("/admin/sponsorajouter")
-public class MembreAjoutServlet extends HttpServlet {
+@WebServlet("/admin/membreajouter")
+public class SponsorAjoutServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 4667046972882137986L;
 
@@ -23,7 +23,7 @@ public class MembreAjoutServlet extends HttpServlet {
 
 
 
-		RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/Admin/sponsorAjouter.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/Admin/membreAjouter.jsp");
 		view.forward(request, response);
 	}
 

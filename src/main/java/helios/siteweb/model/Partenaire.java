@@ -27,14 +27,15 @@ public class Partenaire {
 		this.langue_Partenaire = langue_Partenaire;
 	}
 	
-	public Partenaire(String nom_Partenaire, 
+	public Partenaire(Integer id_Partenaire, String nom_Partenaire, 
 			String description_Partenaire,
 			String photo_Partenaire, 
 			String lien_Partenaire){
+		this.id_Partenaire = id_Partenaire;
 		this.nom_Partenaire = nom_Partenaire;
 		this.description_Partenaire = description_Partenaire;
 		this.photo_Partenaire = photo_Partenaire;
-		this.lien_Partenaire = lien_Partenaire;
+
 	}
 
 	public Integer getId_Partenaire() {

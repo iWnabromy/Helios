@@ -8,4 +8,8 @@ public interface PartenaireDao {
 	
 	public List<Partenaire> getPartenaire();
 
+	public Partenaire getPartenaire(Integer id);
+
+	public void ModifierPartenaire(Partenaire nouveauPartenaire);
+
 }
