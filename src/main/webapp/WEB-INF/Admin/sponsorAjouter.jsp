@@ -67,7 +67,7 @@
 								<div id="example_wrapper" class="dataTables_wrapper" role="grid">
 
 									<div class="clear"></div>
-									<form role="form" method="post" action="membreajouter">
+									<form role="form" method="post" action="sponsorajouter">
 										<input type="hidden" id="id" name="id">
 										<div class="form-group">
 											<label for="email">Nom:</label> <input type="text"
