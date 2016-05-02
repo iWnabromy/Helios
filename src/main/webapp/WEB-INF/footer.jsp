@@ -6,7 +6,7 @@
 				</div>
 				<div class="col-lg-12">
 					<ul class="list-inline" style="text-align: center;">
-						<li><a style="color: #3b5998;" href="https://facebook.com"><i class="fa fa-2x fa-facebook-square"></i></a>
+						<li><a style="color: #3b5998;" href="https://www.facebook.com/HeliosSolarCarTeam/"><i class="fa fa-2x fa-facebook-square"></i></a>
 						</li>
 						<li><a style="color:#0976b4;" href="https://fr.linkedin.com/"><i class="fa fa-2x fa-linkedin-square"></i></a>
 						</li>

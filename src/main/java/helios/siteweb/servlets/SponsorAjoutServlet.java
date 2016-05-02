@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import helios.siteweb.metier.HeliosManager;
-import helios.siteweb.model.Membre;
+import helios.siteweb.model.Partenaire;
 
-@WebServlet("/admin/membreajouter")
+@WebServlet("/admin/Partenaireajouter")
 public class SponsorAjoutServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 4667046972882137986L;
@@ -23,7 +23,7 @@ public class SponsorAjoutServlet extends HttpServlet {
 
 
 
-		RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/Admin/membreAjouter.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/Admin/sponsorAjouter.jsp");
 		view.forward(request, response);
 	}
 
@@ -32,23 +32,18 @@ public class SponsorAjoutServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		String nom_Membre = request.getParameter("nom"); 
-		String prenom_Membre = request.getParameter("prenom"); 
-		String job_Membre = request.getParameter("job");
-		String photo_Membre = request.getParameter("photo");
-		String description_Membre= request.getParameter("description"); 
-		String facebook_Membre = request.getParameter("facebook"); 
-		String link_Membre = request.getParameter("linkedin");
-		String twitter_Membre = request.getParameter("twitter"); 
-		String insta_Membre = request.getParameter("instagram");
-		String mail_Membre = request.getParameter("mail");
-		String langue_Membre = request.getParameter("langue");
+		String nom_Partenaire = request.getParameter("nom"); 
+		String prenom_Partenaire = request.getParameter("description"); 
+		String photo_Partenaire = request.getParameter("photo");
+		String lien_Partenaire = request.getParameter("lien");
+		String imp = request.getParameter("importance");
+		Integer importance_Partenaire = Integer.parseInt(imp);
+		String langue_Partenaire = request.getParameter("langue");
 
-		Membre nouveauMembre = new Membre(null, nom_Membre, prenom_Membre, job_Membre,photo_Membre,
-				description_Membre, facebook_Membre,link_Membre,twitter_Membre,insta_Membre,mail_Membre,langue_Membre );
-		HeliosManager.getInstance().ajouterMembre(nouveauMembre);
+		Partenaire nouveauPartenaire = new Partenaire(null, nom_Partenaire,prenom_Partenaire, photo_Partenaire,lien_Partenaire, importance_Partenaire,langue_Partenaire );
+		HeliosManager.getInstance().ajouterPartenaire(nouveauPartenaire);
 
-		response.sendRedirect("membre");
+		response.sendRedirect("Partenaire");
 
 	}
 

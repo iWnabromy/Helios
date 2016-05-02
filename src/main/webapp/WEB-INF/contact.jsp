@@ -74,7 +74,7 @@
 						href="mailto:helioscarteam@gmail.com">helioscarteam@gmail.com</a>
 				</p>
 				<ul class="list-inline" style="text-align: center;">
-					<li><a style="color: #3b5998;" href="#"><i
+					<li><a style="color: #3b5998;" href="https://www.facebook.com/HeliosSolarCarTeam/"><i
 							class="fa fa-2x fa-facebook-square"></i></a></li>
 					<li><a style="color: #0976b4;" href="#"><i
 							class="fa fa-2x fa-linkedin-square"></i></a></li>
@@ -103,14 +103,14 @@
 								data-validation-required-message="Veuillez entrer votre adresse mail.">
 						</div>
 					</div>
-					<div class="control-group form-group">
+					<!-- 03 28 38 48 80 <div class="control-group form-group">
 						<div class="controls">
 							<label>Mot de passe de votre mail:</label>
 							<input type="password" class="form-control" id="pass" name="pass"
 								required
 								data-validation-required-message="Veuillez entrer votre mdp"
 								maxlength="999" style="resize: none"></textarea>
-						</div>
+						</div>-->
 					<div class="control-group form-group">
 						<div class="controls">
 							<label>Message:</label>

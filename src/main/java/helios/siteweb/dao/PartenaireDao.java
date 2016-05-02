@@ -11,5 +11,9 @@ public interface PartenaireDao {
 	public Partenaire getPartenaire(Integer id);
 
 	public void ModifierPartenaire(Partenaire nouveauPartenaire);
+	
+	public void ajouterPartenaire(Partenaire partenaire);
+
+	public void supprimerPartenaire(Integer id_Partenaire);
 
 }

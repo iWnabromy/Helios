@@ -95,6 +95,50 @@ public class PartenaireDaoImpl implements PartenaireDao{
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void ajouterPartenaire(Partenaire partenaire) {
+		try {
+			Connection connection = DataSourceProvider.getDataSource().getConnection();
+			PreparedStatement stmt = connection.prepareStatement(
+					"INSERT INTO `partenaire`(`nom_Partenaire`,`description_Partenaire`,`photo_Partenaire`,`lien_Partenaire`,`importance_Partenaire`,`langue_Partenaire`)VALUES(?,?,?,?,?,?);");
+			stmt.setString(1, partenaire.getNom_Partenaire());
+			stmt.setString(2, partenaire.getDescription_Partenaire());
+			stmt.setString(3, partenaire.getPhoto_Partenaire());
+			stmt.setString(4, partenaire.getLien_Partenaire());	
+			stmt.setLong(5, partenaire.getImportance_Partenaire());
+			stmt.setString(6, partenaire.getLangue_Partenaire());
+
+			stmt.executeUpdate();
+
+			stmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void supprimerPartenaire(Integer id) {
+		// Creer une nouvelle connexion a la BDD
+
+				try {
+					Connection connection = DataSourceProvider.getDataSource().getConnection();
+
+					// Utiliser la connexion
+
+					PreparedStatement stmt = connection.prepareStatement("DELETE FROM partenaire WHERE id_Partenaire=?");
+					stmt.setInt(1, id);
+					stmt.executeUpdate();
+
+					stmt.close();
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+		
+	}
 }
 
 
