@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import helios.siteweb.metier.HeliosManager;
 import helios.siteweb.model.Membre;
 
-@WebServlet("/admin/sponsorajouter")
+@WebServlet("/admin/membreajouter")
 public class MembreAjoutServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 4667046972882137986L;

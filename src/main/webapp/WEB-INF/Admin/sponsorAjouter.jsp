@@ -80,12 +80,18 @@
 										</div>
 										<br>
 										<div class="form-group">
-											<label>Photo:</label>  <input type="file" id="fichier" name="fichier" class="form-control">
+											<label>Importance:</label> <input type="number"
+												class="form-control" id="importance" name="importance">
 										</div>
 										<br>
 										<div class="form-group">
-											<label>Lien:</label> <input type="text" name="lien"
-												id="lien" class="form-control">
+											<label>Photo:</label> <input type="file" id="fichier"
+												name="fichier" class="form-control">
+										</div>
+										<br>
+										<div class="form-group">
+											<label>Lien:</label> <input type="text" name="lien" id="lien"
+												class="form-control">
 										</div>
 										<br>
 										<button type="submit" class="btn btn-default">Enregistrer</button>

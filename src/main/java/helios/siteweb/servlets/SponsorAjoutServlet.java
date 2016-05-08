@@ -19,7 +19,7 @@ import javax.servlet.http.Part;
 import helios.siteweb.metier.HeliosManager;
 import helios.siteweb.model.Partenaire;
 
-@WebServlet("/admin/sponsoreajouter")
+@WebServlet("/admin/sponsorajouter")
 public class SponsorAjoutServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 4667046972882137986L;
