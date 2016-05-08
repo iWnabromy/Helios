@@ -63,6 +63,8 @@
 					<li id="page20"><a href="#">5</a></li>
 					<li id="apres"><a href="#">&raquo;</a></li>
 				</ul>
+				
+				<a> <img src="img/sponsors/tektronix.jpg"></a>
 			</div>
 		</div>
 		<!-- /.row -->

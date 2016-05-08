@@ -80,8 +80,7 @@
 										</div>
 										<br>
 										<div class="form-group">
-											<label>Photo:</label> <input type="text" name="photo"
-												class="form-control" id="photo">
+											<label>Photo:</label>  <input type="file" id="fichier" name="fichier" class="form-control">
 										</div>
 										<br>
 										<div class="form-group">
