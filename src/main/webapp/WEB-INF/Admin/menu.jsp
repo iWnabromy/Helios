@@ -38,9 +38,8 @@
 							<li><a><i class="fa fa-edit"></i> Articles <span
 									class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu" style="display: none;">
-									<li><a href="">Ecrire un nouvel article</a></li>
-									<li><a href="">Modifier un article</a></li>
-									<li><a href="">Supprimer un article</a></li>
+									<li><a href="articleajouter">Ecrire un nouvel article</a></li>
+									<li><a href="article">Liste des articles</a></li>
 
 								</ul></li>
 							<li><a><i class="fa fa-user"></i> Membres <span
@@ -49,8 +48,8 @@
 									<li><a href="membre">Liste des membres</a>
 									<li><a href="membreajouter">Ajouter un membre</a></li>
 								</ul></li>
-							<li class="active"><a><i class="fa fa-table"></i>
-									Evénements <span class="fa fa-chevron-down"></span></a>
+							<li><a><i class="fa fa-table"></i> Evénements <span
+									class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
 									<li><a href="">Listes des événements</a></li>
 									<li class="current-page"><a href="">Créer un nouvel
@@ -59,15 +58,16 @@
 							<li><a><i class="fa fa-th-list"></i> Catégories <span
 									class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu" style="display: none;">
-									<li><a href="">Liste des catégories</a></li>
-									<li><a href="">Ajouter une catégorie</a></li>
+									<li><a href="categorie">Liste des catégories</a></li>
+									<li><a href="categorieajouter">Ajouter une catégorie</a></li>
 								</ul></li>
-							<li><a><i class="fa fa-th-list"></i> Sponsors <span
+							<li><a><i class="fa fa-users"></i> Sponsors <span
 									class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu" style="display: none;">
 									<li><a href="sponsor">Liste des sponsors</a></li>
 									<li><a href="sponsorajouter">Ajouter un sponsor</a></li>
 								</ul></li>
+							<li><a class="fa fa-upload" href="upload"> Upload</a></li>
 						</ul>
 					</div>
 					<!-- <div class="menu_section">

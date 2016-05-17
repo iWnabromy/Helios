@@ -1,29 +1,17 @@
-var nbPhoto = 8;
-var nbVideo = 8;
+var nbPhoto = -6;
+var nbVideo = -5;
 
 var getPhoto = function(){
 	var requeteGetPhoto = new XMLHttpRequest();
-	requeteGetPhoto.open("GET", "ws/galerie/photo");
+	requeteGetPhoto.open("GET", "galerieAJAX");
 	requeteGetPhoto.responseType = "json";
 	requeteGetPhoto.onload = function(){
 		var a = this.response.length;
-		for(var i=0; i<nbPhoto; i++){
-			var lienPhoto = "article/"+this.response[i].article_Galerie;
-			var lienImg = "img/"+this.response[i].lien_Galerie;
+		for(var i=nbPhoto; i<nbPhoto+6; i++){
+			var lienImg = this.response[i].lien_Galerie;
 			
-			var div1Photo = document.createElement('div');			
-			div1Photo.setAttribute("class", "col-md-3 col-sm-6 galerieInf");
-			
-			var div2Photo = document.createElement('div');
-			div2Photo.setAttribute("class", "panel panel-default text-center");
-			div2Photo.setAttribute("style", "border:none; box-shadow:none;");
-			
-			var div3Photo = document.createElement('div');
-			div3Photo.setAttribute("class", "panel-heading");
-			div3Photo.setAttribute("style", "border:none; background-color:white;");
-			var span3Photo = document.createElement('span');
-			span3Photo.setAttribute("class", "fa-stack fa-5x");
-			span3Photo.setAttribute("style", "width:180px");
+			var divPhoto = document.createElement('div');
+			divPhoto.setAttribute("style", "display:inline-block; max-width:30%;margin:10px 10px 10px 10px;");
 			var a3Photo = document.createElement('a');
 			a3Photo.setAttribute("href", lienImg);
 			a3Photo.setAttribute("data-lightbox","photo");
@@ -32,94 +20,77 @@ var getPhoto = function(){
 			img3Photo.setAttribute("src", lienImg);
 			img3Photo.setAttribute("alt", "");
 			
-			/*var div4Photo = document.createElement('div');
-			div4Photo.setAttribute("class", "panel-body");
-			var h4Photo = document.createElement('h4');
-			h4Photo.textContent = this.response[i].titre_Galerie;
-			var a4Photo = document.createElement('a');
-			a4Photo.setAttribute("href", lienPhoto);
-			a4Photo.setAttribute("class", "btn btn-primary");
-			a4Photo.textContent = "Voir l'article associé";*/
 			a3Photo.appendChild(img3Photo);
-			span3Photo.appendChild(a3Photo);
-			div3Photo.appendChild(span3Photo);
-			
-			/*div4Photo.appendChild(h4Photo);
-			div4Photo.appendChild(a4Photo);*/
-			
-			div2Photo.appendChild(div3Photo);
-			//div2Photo.appendChild(div4Photo);
-			
-			div1Photo.appendChild(div2Photo);
+			divPhoto.appendChild(a3Photo);
 			
 			var id = "rowPhoto";
-			document.getElementById(id).appendChild(div1Photo);
+			document.getElementById(id).appendChild(divPhoto);
 		}
 		
 	}
+	nbPhoto = nbPhoto + 6;
 	requeteGetPhoto.send();
 };
 
 var getVideo = function(){
 	var requeteGetPhoto = new XMLHttpRequest();
-	requeteGetPhoto.open("GET", "ws/galerie/video");
+	requeteGetPhoto.open("GET", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&contentDetails&maxResults=50&playlistId=UURbUhGH4IGrlilsRBQmLM4w&key=AIzaSyDQ8s9yYV0jj7PMXrfqRl6_DIMtgdMhT4Q");
 	requeteGetPhoto.responseType = "json";
 	requeteGetPhoto.onload = function(){
-		var a = this.response.length;
-		for(var i=0; i<nbVideo; i++){
-			var lienPhoto = "article/"+this.response[i].article_Galerie;
-			var lienImg = "img/"+this.response[i].lien_Galerie;
+		var a = this.response.items.length;
+		for(var i=nbVideo; i<nbVideo+5; i++){
+			var lienVideo = "https://www.youtube.com/embed/"+this.response.items[i].snippet.resourceId.videoId;
 			
-			var div1Photo = document.createElement('div');			
-			div1Photo.setAttribute("class", "col-md-3 col-sm-6 galerieInf");
+			var divVideo = document.createElement('div');
+
+			var div1Video = document.createElement('div');
+			var iframeVideo = document.createElement('iframe');
+
+			var div2Video = document.createElement('div');
+			var h3Video = document.createElement('h3');
+			var pVideo = document.createElement('p');
+
+			var hrVideo = document.createElement('hr');
+			hrVideo.setAttribute("class", "partenaire");
+			divVideo.setAttribute("class", "row partenaire");
+
+			div1Video.setAttribute("class", "col-md-7");
+			iframeVideo.setAttribute("width", "560");
+			iframeVideo.setAttribute("height", "315");
+			iframeVideo.setAttribute("src", lienVideo);
+			iframeVideo.setAttribute("frameborder", "0");
+			iframeVideo.setAttribute("allowfullscreen", "");
 			
-			var div2Photo = document.createElement('div');
-			div2Photo.setAttribute("class", "panel panel-default text-center");
-			div2Photo.setAttribute("style", "border:none; box-shadow:none;");
-			
-			var div3Photo = document.createElement('div');
-			div3Photo.setAttribute("class", "panel-heading");
-			div3Photo.setAttribute("style", "border:none; background-color:white;");
-			var span3Photo = document.createElement('span');
-			span3Photo.setAttribute("class", "fa-stack fa-5x");
-			span3Photo.setAttribute("style", "width:180px");
-			var a3Photo = document.createElement('a');
-			a3Photo.setAttribute("href", lienImg);
-			a3Photo.setAttribute("data-lightbox","video");
-			var img3Photo = document.createElement('img');
-			img3Photo.setAttribute("class", "img-responsive");
-			img3Photo.setAttribute("src", lienImg);
-			img3Photo.setAttribute("alt", "");
-			
-			/*var div4Photo = document.createElement('div');
-			div4Photo.setAttribute("class", "panel-body");
-			var h4Photo = document.createElement('h4');
-			h4Photo.textContent = this.response[i].titre_Galerie;
-			var a4Photo = document.createElement('a');
-			a4Photo.setAttribute("href", lienPhoto);
-			a4Photo.setAttribute("class", "btn btn-primary");
-			a4Photo.textContent = "Voir l'article associé";*/
-			a3Photo.appendChild(img3Photo);
-			span3Photo.appendChild(a3Photo);
-			div3Photo.appendChild(span3Photo);
-			
-			/*div4Photo.appendChild(h4Photo);
-			div4Photo.appendChild(a4Photo);*/
-			
-			div2Photo.appendChild(div3Photo);
-			//div2Photo.appendChild(div4Photo);
-			
-			div1Photo.appendChild(div2Photo);
-			
+
+			div2Video.setAttribute("class", "col-md-5");
+			h3Video.textContent = this.response.items[i].snippet.title;
+			pVideo.textContent = this.response.items[i].snippet.description;
+
+			div1Video.appendChild(iframeVideo);
+
+			div2Video.appendChild(h3Video);
+			div2Video.appendChild(pVideo);
+
+			divVideo.appendChild(div1Video);
+			divVideo.appendChild(div2Video);
+
 			var id = "rowVideo";
-			document.getElementById(id).appendChild(div1Photo);
+			document.getElementById(id).appendChild(divVideo);
+			document.getElementById(id).appendChild(hrVideo);
 		}
-		
 	}
+	nbVideo = nbVideo +5;
 	requeteGetPhoto.send();
 };
 
 window.onload = function() {
 	getPhoto();
 	getVideo();
+	
+	document.getElementById("buttonVideo").onclick = function() {
+		getVideo();
+	};
+	document.getElementById("buttonPhoto").onclick = function() {
+		getPhoto();
+	};
 }

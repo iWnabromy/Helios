@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Ajouter membre |</title>
+<title>Liste articles |</title>
 
 <!-- Bootstrap core CSS -->
 
@@ -59,69 +59,81 @@
 						<div class="x_panel">
 							<div class="x_title">
 								<h2>
-									Ajouter un membre <small></small>
+									Liste des articles <small></small>
 								</h2>
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
 								<div id="example_wrapper" class="dataTables_wrapper" role="grid">
-
 									<div class="clear"></div>
-									<form role="form" method="post" action="membreajouter">
-										<input type="hidden" id="id" name="id">
-										<div class="form-group">
-											<label for="email">Nom:</label> <input type="text"
-												class="form-control" name="nom" id="nom">
-										</div>
-										<div class="form-group">
-											<label>Prénom:</label> <input type="text"
-												class="form-control" id="prenom" name="prenom">
-										</div>
-										<div class="form-group">
-											<label>Rôle :</label> <input type="text" class="form-control"
-												name="job" id="job">
-										</div>
-										<div class="form-group">
-											<label>Mail:</label> <input type="email" class="form-control"
-												id="mail" name="mail">
-										</div>
-										<div class="form-group">
-											<label for="Description">Description:</label>
-											<textarea name="description" id="description"
-												name="description" class="form-control" rows="10" cols="250"></textarea>
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Photo:</label> <input type="text" name="photo"
-												class="form-control" id="photo">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Facebook:</label> <input type="text" name="facebook"
-												id="facebook" class="form-control">
-										</div>
-										<br>
-
-										<div class="form-group">
-											<label>Twitter:</label> <input type="text"
-												class="form-control" name="twitter" id="twitter">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>LinkedIn:</label> <input type="text"
-												class="form-control" name="linkedin" id="linkedin">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Instagram:</label> <input type="text"
-												class="form-control" name="instagram" id="instagram">
-										</div>
-										<input type="hidden" name="langue" id="langue"> <br>
-
-										<button type="submit" class="btn btn-default">Enregistrer</button>
+									<div class="dataTables_filter" id="example_filter">
+										<label>Recherche : <input type="text"
+											aria-controls="example"></label>
+									</div>
+									<table id="example"
+										class="table table-striped responsive-utilities jambo_table dataTable"
+										aria-describedby="example_info">
+										<thead>
+											<tr class="headings" role="row">
+												<th class="sorting" role="columnheader" tabindex="0"
+													aria-controls="example" rowspan="1" colspan="1"
+													aria-label="Nom : activate to sort column ascending"
+													style="width: 104px;">Titre</th>
+												<th class="sorting" role="columnheader" tabindex="0"
+													aria-controls="example" rowspan="1" colspan="1"
+													aria-label="Invoice Date : activate to sort column ascending"
+													style="width: 104px;">Date</th>
+												<th class="sorting" role="columnheader" tabindex="0"
+													aria-controls="example" rowspan="1" colspan="1"
+													aria-label="Order : activate to sort column ascending"
+													style="width: 104px;">Catégorie</th>
+												<th class="sorting" role="columnheader" tabindex="0"
+													aria-controls="example" rowspan="1" colspan="1"
+													aria-label="Status : activate to sort column ascending"
+													style="width: 69px;">Photo présentation</th>
+												<th class="sorting" role="columnheader" tabindex="0"
+													aria-controls="example" rowspan="1" colspan="1"
+													aria-label="Status : activate to sort column ascending"
+													style="width: 69px;">Photo article</th>
+												<th class="no-link last sorting" role="columnheader"
+													tabindex="0" aria-controls="example" rowspan="1"
+													colspan="1"
+													aria-label="Action
+                                                : activate to sort column ascending"
+													style="width: 71px;"><span class="nobr">Action</span>
+												</th>
+											</tr>
+										</thead>
 
 
-									</form>
+
+										<tbody role="alert" aria-live="polite" aria-relevant="all">
+											<tr class="pointer odd">
+
+												<c:forEach var="articles" items="${listeArticles}">
+													<tr>
+														<td class=" ">${articles.titre_Article}</td>
+														<td>${articles.date_Article}</td>
+														<td>${articles.categorie_Article}</td>
+														<td>${articles.photoPresentation_Article}</td>
+														<td>${articles.photo_Article}</td>
+														<td class=" last "><a
+															href="articlemodifier?id=${articles.id_Article}"><span
+																class="glyphicon glyphicon-pencil"> Modifier</span></a> <br>
+															<form method="post" action="article">
+																<input type="hidden" id="id" name="id"
+																	value="${articles.id_Article}"> <span
+																	class="glyphicon glyphicon-remove"></span> <input
+																	style="font-style: normal; font-family: 'Glyphicons Halflings'; background: none; border: none;"
+																	type="submit" value="Supprimer"
+																	onclick="return confirm('Voulez-vous vraiment supprimer ${articles.titre_Article} ?')">
+															</form></td>
+
+													</tr>
+												</c:forEach>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
@@ -137,7 +149,6 @@
 		</div>
 		<!-- /page content -->
 	</div>
-
 
 	<div id="custom_notifications" class="custom-notifications dsp_none">
 		<ul class="list-unstyled notifications clearfix"

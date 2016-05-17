@@ -1,11 +1,11 @@
 ﻿var getMembre = function(){
 	var requeteGetMembre = new XMLHttpRequest();
-	requeteGetMembre.open("GET", "ws/membre");
+	requeteGetMembre.open("GET", "teamAJAX");
 	requeteGetMembre.responseType = "json";
 	requeteGetMembre.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<a; i++){
-			var lienImg = "img/"+this.response[i].photo_Membre;
+			var lienImg = this.response[i].photo_Membre;
 			
 			var div1Membre = document.createElement('div');
 			

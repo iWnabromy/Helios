@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Ajouter membre |</title>
+<title>Ajouter categorie |</title>
 
 <!-- Bootstrap core CSS -->
 
@@ -59,7 +59,7 @@
 						<div class="x_panel">
 							<div class="x_title">
 								<h2>
-									Ajouter un membre <small></small>
+									Ajouter une categorie <small></small>
 								</h2>
 								<div class="clearfix"></div>
 							</div>
@@ -67,54 +67,11 @@
 								<div id="example_wrapper" class="dataTables_wrapper" role="grid">
 
 									<div class="clear"></div>
-									<form role="form" method="post" action="membreajouter">
+									<form role="form" method="post" action="categorieajouter">
 										<input type="hidden" id="id" name="id">
 										<div class="form-group">
 											<label for="email">Nom:</label> <input type="text"
 												class="form-control" name="nom" id="nom">
-										</div>
-										<div class="form-group">
-											<label>Prénom:</label> <input type="text"
-												class="form-control" id="prenom" name="prenom">
-										</div>
-										<div class="form-group">
-											<label>Rôle :</label> <input type="text" class="form-control"
-												name="job" id="job">
-										</div>
-										<div class="form-group">
-											<label>Mail:</label> <input type="email" class="form-control"
-												id="mail" name="mail">
-										</div>
-										<div class="form-group">
-											<label for="Description">Description:</label>
-											<textarea name="description" id="description"
-												name="description" class="form-control" rows="10" cols="250"></textarea>
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Photo:</label> <input type="text" name="photo"
-												class="form-control" id="photo">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Facebook:</label> <input type="text" name="facebook"
-												id="facebook" class="form-control">
-										</div>
-										<br>
-
-										<div class="form-group">
-											<label>Twitter:</label> <input type="text"
-												class="form-control" name="twitter" id="twitter">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>LinkedIn:</label> <input type="text"
-												class="form-control" name="linkedin" id="linkedin">
-										</div>
-										<br>
-										<div class="form-group">
-											<label>Instagram:</label> <input type="text"
-												class="form-control" name="instagram" id="instagram">
 										</div>
 										<input type="hidden" name="langue" id="langue"> <br>
 

@@ -134,19 +134,6 @@
 											</tr>
 										</tbody>
 									</table>
-									<div class="dataTables_paginate paging_full_numbers"
-										id="example_paginate">
-										<a tabindex="0"
-											class="first paginate_button paginate_button_disabled"
-											id="example_first">Début</a><a tabindex="0"
-											class="previous paginate_button paginate_button_disabled"
-											id="example_previous">Précédent</a><a
-											tabindex="0" class="paginate_active">1</a><a tabindex="0"
-											class="paginate_button">2</a><a tabindex="0"
-											class="paginate_button">3</a><a tabindex="0"
-											class="next paginate_button" id="example_next">Suivant</a><a
-											tabindex="0" class="last paginate_button" id="example_last">Fin</a>
-									</div>
 								</div>
 							</div>
 						</div>

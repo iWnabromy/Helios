@@ -12,7 +12,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#" style="padding-top: 6px;"> 
+			<a class="navbar-brand" href="accueil" style="padding-top: 6px;"> 
 			<img src="img/logo/helios.jpg" alt="">
 			</a>
 		</div>
@@ -28,11 +28,12 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Voitures <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="portfolio-1-col.html">Hélios 1</a></li>
-						<li><a href="portfolio-2-col.html">Hélios 2</a></li>
-						<li><a href="portfolio-3-col.html">Hélios 3</a></li>
-						<li><a href="portfolio-4-col.html">Hélios 4</a></li>
-						<li><a href="portfolio-item.html">Hélios 5</a></li>
+						<li><a href="voiture">Les prototypes</a></li>
+						<li><a href="helios1">Hélios I</a></li>
+						<li><a href="helios2">Hélios II</a></li>
+						<li><a href="helios3">Hélios III</a></li>
+						<li><a href="helios4">Hélios IV</a></li>
+						<li><a href="helios5">Hélios V</a></li>
 					</ul></li>
 				<li><a href="team">L'équipe</a></li>
 				<li><a href="partenaires">Partenaires</a></li>
@@ -57,14 +58,14 @@
 	<div class="carousel-inner">
 		<div class="item active">
 			<div class="fill"
-				style="background-image: url(img/slide/background.jpg;)"></div>
+				style="background-image: url(http://helios-solarteam.rhcloud.com/static/accueil1.jpg;)"></div>
 			<div class="carousel-caption">
 				<h2></h2>
 			</div>
 		</div>
 		<div class="item">
 			<div class="fill"
-				style="background-image: url(img/slide/austria.jpg;)"></div>
+				style="background-image: url(http://helios-solarteam.rhcloud.com/static/accueil2.jpg;)"></div>
 			<div class="carousel-caption">
 				<h2></h2>
 			</div>

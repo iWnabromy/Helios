@@ -2,13 +2,13 @@ var nb = 0;
 
 var getPartenaire = function(int){
 	var requeteGetPartenaire = new XMLHttpRequest();
-	requeteGetPartenaire.open("GET", "ws/partenaire");
+	requeteGetPartenaire.open("GET", "partenairesAJAX");
 	requeteGetPartenaire.responseType = "json";
 	requeteGetPartenaire.onload = function(){
 		var a = this.response.length;
 		for(var i=int; i<int+5; i++){
 			var lienPartenaire = this.response[i].lien_Partenaire;
-			var lienImg = "img/"+this.response[i].photo_Partenaire;
+			var lienImg = this.response[i].photo_Partenaire;
 			
 			var divPartenaire = document.createElement('div');
 			

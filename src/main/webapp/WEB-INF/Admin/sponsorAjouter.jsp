@@ -67,7 +67,8 @@
 								<div id="example_wrapper" class="dataTables_wrapper" role="grid">
 
 									<div class="clear"></div>
-									<form role="form" method="post" action="sponsorajouter">
+									<form role="form" method="post" action="sponsorajouter"
+										enctype="multipart/form-data">
 										<input type="hidden" id="id" name="id">
 										<div class="form-group">
 											<label for="email">Nom:</label> <input type="text"
@@ -78,16 +79,16 @@
 											<textarea name="description" id="description"
 												name="description" class="form-control" rows="10" cols="250"> ${membre.description_Membre}</textarea>
 										</div>
-										<br>
+										<div class="form-group">
+											<label for="photo">Photo:</label> <input type="text"
+												class="form-control" name="photo" id="photo">
+										</div>
+									
 										<div class="form-group">
 											<label>Importance:</label> <input type="number"
 												class="form-control" id="importance" name="importance">
 										</div>
 										<br>
-										<div class="form-group">
-											<label>Photo:</label> <input type="file" id="fichier"
-												name="fichier" class="form-control">
-										</div>
 										<br>
 										<div class="form-group">
 											<label>Lien:</label> <input type="text" name="lien" id="lien"

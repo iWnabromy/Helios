@@ -14,18 +14,21 @@ public interface ArticleDao {
 	
 	public Article getArticle(Integer id_Article);
 	
-	public List<Article> getArticleTest();
+	public void modifierArticle(Article nouvelArticle);
+
+	public void ajouterArticle(Article nouvelArticle);
+
+	public void supprimerArticle(Integer id_Article);
 	
 	public List<Article> getArticleCategorie(String categorie_Article);
 	
-	public List<Article> getArticleCategorieTest(String categorie_Article);
-	
 	public List<Article> getCategorie();
-	
-	public List<Article> getCategorieTest();
 	
 	public List<Article> getArticleRecherche(String texte_Article);
 	
+	public List<Article> getArticleTest();
+	public List<Article> getArticleCategorieTest(String categorie_Article);
+	public List<Article> getCategorieTest();
 	public List<Article> getArticleRechercheTest(String texte_Article);
 
 }

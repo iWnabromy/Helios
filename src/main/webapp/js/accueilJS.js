@@ -1,12 +1,12 @@
 var getArticleAccueil = function(){
 	var requeteGetArticleAccueil = new XMLHttpRequest();
-	requeteGetArticleAccueil.open("GET", "ws/article/accueil");
+	requeteGetArticleAccueil.open("GET", "articlesAJAX");
 	requeteGetArticleAccueil.responseType = "json";
 	requeteGetArticleAccueil.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<6; i++){
 			var lienPage = "article?id="+this.response[i].id_Article;
-			var lienImg = "img/"+this.response[i].photoPresentation_Article;
+			var lienImg = this.response[i].photoPresentation_Article;
 			var divArticle = document.createElement('div');
 			var divHover = document.createElement('div');
 			var imgArticle = document.createElement('img');

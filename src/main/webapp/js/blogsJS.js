@@ -1,6 +1,6 @@
 var getCategorie = function(){
 	var requeteCategorie = new XMLHttpRequest();
-	requeteCategorie.open("GET", "ws/article/categorie");
+	requeteCategorie.open("GET", "categoriesAJAX");
 	requeteCategorie.responseType = "json";
 	requeteCategorie.onload = function(){
 		var a = this.response.length;

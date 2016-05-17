@@ -4,18 +4,21 @@ import java.util.List;
 
 import helios.siteweb.dao.AdminDao;
 import helios.siteweb.dao.ArticleDao;
+import helios.siteweb.dao.CategorieDao;
 import helios.siteweb.dao.EvenementDao;
 import helios.siteweb.dao.GalerieDao;
 import helios.siteweb.dao.MembreDao;
 import helios.siteweb.dao.PartenaireDao;
 import helios.siteweb.dao.impl.AdminDaoImpl;
 import helios.siteweb.dao.impl.ArticleDaoImpl;
+import helios.siteweb.dao.impl.CategorieDaoImpl;
 import helios.siteweb.dao.impl.EvenementDaoImpl;
 import helios.siteweb.dao.impl.GalerieDaoImpl;
 import helios.siteweb.dao.impl.MembreDaoImpl;
 import helios.siteweb.dao.impl.PartenaireDaoImpl;
 import helios.siteweb.model.Admin;
 import helios.siteweb.model.Article;
+import helios.siteweb.model.Categorie;
 import helios.siteweb.model.Evenement;
 import helios.siteweb.model.Membre;
 import helios.siteweb.model.Partenaire;
@@ -38,6 +41,7 @@ public class HeliosManager {
 	private PartenaireDao partenaireDao = new PartenaireDaoImpl();
 	private GalerieDao galerieDao = new GalerieDaoImpl();
 	private AdminDao adminDao = new AdminDaoImpl();
+	private CategorieDao categorieDao = new CategorieDaoImpl();
 
 	private HeliosManager(){
 
@@ -146,5 +150,37 @@ public class HeliosManager {
 
 	public void supprimerPartenaire(Integer id_Partenaire) {
 		partenaireDao.supprimerPartenaire(id_Partenaire);		
+	}
+
+	public List<Categorie> getCategories() {
+		List<Categorie> listecat = categorieDao.getCategorie();
+		return listecat;
+	}
+	public void modifierArticle(Article nouvelArticle) {
+		if (nouvelArticle == null) {
+			throw new IllegalArgumentException("L'article à modifier ne peut pas être null.");
+		}
+		else
+			articleDao.modifierArticle(nouvelArticle);
+
+	}
+
+	public void ajouterArticle(Article nouvelArticle) {
+		articleDao.ajouterArticle(nouvelArticle);
+	}
+
+
+	public void supprimerArticle(Integer id_Article) {
+		articleDao.supprimerArticle(id_Article);		
+	}
+
+	public void ajouterCategorie(Categorie nouvellecategorie) {
+		categorieDao.ajouterCategorie(nouvellecategorie);
+		
+	}
+
+	public void ModifierCategorie(Categorie nouvellecategorie) {
+		categorieDao.ModifierCategorie(nouvellecategorie);
+		
 	}
 }

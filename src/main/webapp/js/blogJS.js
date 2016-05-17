@@ -2,13 +2,13 @@ var nb = 0;
 
 var getArticle = function(int){
 var requeteGetArticle = new XMLHttpRequest();
-requeteGetArticle.open("GET", "ws/article/blog");
+requeteGetArticle.open("GET", "articlesAJAX");
 requeteGetArticle.responseType = "json";
 requeteGetArticle.onload = function(){
 var a = this.response.length;
 for(var i=int; i<int+5; i++){
 var lienPage =  "article?id="+this.response[i].id_Article;
-var lienImg = "img/"+this.response[i].photoPresentation_Article;
+var lienImg = this.response[i].photoPresentation_Article;
 
 var h2Article = document.createElement('h2');
 var ah2Article = document.createElement('a');
@@ -102,7 +102,7 @@ obj.removeChild(el);
 
 var getCategorie = function(){
 	var requeteCategorie = new XMLHttpRequest();
-	requeteCategorie.open("GET", "ws/article/categorie");
+	requeteCategorie.open("GET", "categoriesAJAX");
 	requeteCategorie.responseType = "json";
 	requeteCategorie.onload = function(){
 		var a = this.response.length;

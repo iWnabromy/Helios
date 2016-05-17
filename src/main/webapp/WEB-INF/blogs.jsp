@@ -62,7 +62,7 @@
                 <p class="blog1"><i class="fa fa-clock-o"></i> Posté le ${article.date_Article}</p>
                 <hr class="blog1">
                 <a href="article?id=${article.id_Article}" class="blog1">
-                    <img class="img-responsive img-hover" src="img/${article.photoPresentation_Article}" alt="">
+                    <img class="img-responsive img-hover" src="http://helios-solarteam.rhcloud.com/static/${article.photoPresentation_Article}" alt="">
                 </a>
                 <hr class="blog1">
                 <p class="blog1">${article.textePresentation_Article}</p>

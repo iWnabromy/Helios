@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Galerie</title>
+<title>Voiture</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
-	
+
 <link href="css/lightbox.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,49 +48,12 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">
-					Galerie <small></small>
+					Helios V <small></small>
 				</h1>
 			</div>
 		</div>
-
-		<!-- Service Panels -->
-		<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-
-		<!-- Service Tabs -->
-		<div class="row">
-			<div class="col-lg-12" id="containerPhoto">
-
-				<ul id="myTab" class="nav nav-tabs nav-justified">
-					<li class="active"><a href="#photos" data-toggle="tab"><i
-							class="fa fa-tree"></i> Photos</a></li>
-					<li class=""><a href="#videos" data-toggle="tab"><i
-							class="fa fa-car"></i> Vidéos</a></li>
-				</ul>
-				
-				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade active in" id="photos">
-					<hr>
-						<div class="row" id="rowPhoto" style="text-align:center;">
-						</div>
-						<hr>
-						<div style="text-align:center">
-							<a class="btn btn-primary" href="#s" id="buttonPhoto"><i>Voir plus</i></a>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="videos">
-						<div class="row" id="rowVideo">
-						<hr>
-						</div>
-						<div style="text-align:center">
-							<a class="btn btn-primary" href="#s" id="buttonVideo"><i>Voir plus</i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Service List -->
-		<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-
+		<img class="img-responsive img-hover" alt="Hélios V" src="http://helios-solarteam.rhcloud.com/static/helios5Page.jpg">
+		<hr>
 		<!-- Footer -->
 		<c:import url="footer.jsp">
 		</c:import>
@@ -100,7 +63,6 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/galerieJS.js"></script>
 	<script src="js/lightbox.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->

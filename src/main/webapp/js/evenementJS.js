@@ -2,13 +2,13 @@ var nb = 0;
 
 var getEvenement = function(int){
 	var requeteGetEvenement = new XMLHttpRequest();
-	requeteGetEvenement.open("GET", "ws/evenement");
+	requeteGetEvenement.open("GET", "evenementsAJAX");
 	requeteGetEvenement.responseType = "json";
 	requeteGetEvenement.onload = function(){
 		var a = this.response.length;
 		for(var i=int; i<int+5; i++){
 			var lienPage = "article/"+this.response[i].article_Evenement;
-			var lienImg = "img/"+this.response[i].photo_Evenement;
+			var lienImg = this.response[i].photo_Evenement;
 			
 			var divEvenement = document.createElement('div');
 			

@@ -65,14 +65,16 @@ public class ArticleDaoImpl implements ArticleDao{
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
 			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM article ORDER BY date_Article DESC");
 			
-			ResultSet rs = stmt.executeQuery();
-			while (rs.next()) {
-				listeArticle.add(new Article(rs.getInt("id_Article"), rs.getString("titre_Article"), 
-						rs.getString("photoPresentation_Article"), rs.getString("textePresentation_Article"),
-						rs.getString("date_Article")));
+			ResultSet resultSet = stmt.executeQuery();
+			while (resultSet.next()) {
+				listeArticle.add(new Article(resultSet.getInt("id_Article"), resultSet.getString("titre_Article"),
+						resultSet.getString("photoPresentation_Article"), resultSet.getString("textePresentation_Article"), 
+						resultSet.getString("photo_Article"), resultSet.getString("texte_Article"),
+						resultSet.getString("date_Article"),resultSet.getString("categorie_Article"),
+						resultSet.getString("langue_Article")));
 			}
 			
-			rs.close();
+			resultSet.close();
 			stmt.close();
 			connection.close();
 
@@ -261,7 +263,7 @@ public class ArticleDaoImpl implements ArticleDao{
 				a = new Article(resultSet.getInt("id_Article"), resultSet.getString("titre_Article"),
 						resultSet.getString("photoPresentation_Article"), resultSet.getString("textePresentation_Article"), 
 						resultSet.getString("photo_Article"), resultSet.getString("texte_Article"),
-						resultSet.getString("date_Article"), resultSet.getString("langue_Article"));
+						resultSet.getString("date_Article"),resultSet.getString("categorie_Article"), resultSet.getString("langue_Article"));
 			}
 			stmt.close();
 			connection.close();
@@ -269,5 +271,85 @@ public class ArticleDaoImpl implements ArticleDao{
 			e.printStackTrace();
 		}
 		return a;
+	}
+	
+	public void modifierArticle(Article nouvelArticle){
+		
+		try {
+			Connection connection = DataSourceProvider.getDataSource().getConnection();
+
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM article WHERE id_Article=?");
+			stmt.setInt(1, nouvelArticle.getId_Article());
+			ResultSet resultSet = stmt.executeQuery();
+
+			resultSet.next();
+			PreparedStatement stmt2 = connection
+					.prepareStatement("UPDATE article SET titre_Article =?,"
+							+ " photoPresentation_Article=?,textePresentation_Article=?,photo_Article=?, texte_Article=?,"
+							+ "date_Article=?,categorie_Article=?, langue_Article=? "
+							+ "  WHERE id_Article=?");
+
+
+			stmt2.setInt(9, nouvelArticle.getId_Article());
+
+			stmt2.setString(1, nouvelArticle.getTitre_Article());
+			stmt2.setString(2, nouvelArticle.getPhotoPresentation_Article());
+			stmt2.setString(3, nouvelArticle.getTextePresentation_Article());
+			stmt2.setString(4, nouvelArticle.getPhoto_Article());
+			stmt2.setString(5, nouvelArticle.getTexte_Article());
+			stmt2.setString(6, nouvelArticle.getDate_Article());
+			stmt2.setString(7, nouvelArticle.getCategorie_Article());
+			stmt2.setString(8, nouvelArticle.getLangue_Article());
+
+			stmt2.executeUpdate();
+
+			stmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void ajouterArticle(Article nouvelArticle){
+		
+		try {
+			Connection connection = DataSourceProvider.getDataSource().getConnection();
+			PreparedStatement stmt = connection.prepareStatement(
+					"INSERT INTO `article`(`titre_Article`,`photoPresentation_Article`,`textePresentation_Article`,`photo_Article`,`texte_Article`,`date_Article`,`categorie_Article`,`langue_Article`)VALUES(?,?,?,?,?,?,?,?);");
+			stmt.setString(1, nouvelArticle.getTitre_Article());
+			stmt.setString(2, nouvelArticle.getPhotoPresentation_Article());
+			stmt.setString(3, nouvelArticle.getTextePresentation_Article());
+			stmt.setString(4, nouvelArticle.getPhoto_Article());
+			stmt.setString(5, nouvelArticle.getTexte_Article());
+			stmt.setString(6, nouvelArticle.getDate_Article());
+			stmt.setString(7, nouvelArticle.getCategorie_Article());
+			stmt.setString(8, nouvelArticle.getLangue_Article());
+
+			stmt.executeUpdate();
+
+			stmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void supprimerArticle(Integer id_Article){
+		
+		try {
+			Connection connection = DataSourceProvider.getDataSource().getConnection();
+
+			PreparedStatement stmt = connection.prepareStatement("DELETE FROM article WHERE id_article=?");
+			stmt.setInt(1, id_Article);
+			stmt.executeUpdate();
+
+			stmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }
